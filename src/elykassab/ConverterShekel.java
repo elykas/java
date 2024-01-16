@@ -2,7 +2,7 @@ package elykassab;
 
 import java.util.Scanner;
 
-public class ConverterShekel {//example
+public class ConverterShekel {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -28,32 +28,43 @@ public class ConverterShekel {//example
 		 
 		 if (numberOfAssignments<=4) {
 			 finalGrade=0;
-		 }else if(numberOfAssignments<=6) {
-			 if(examGrade>=PASS)
-			 {
-				 finalGrade=examGrade*(1-WEIGHT_OF_5_6_ASSIGNMENTS);
-			     finalGrade += homeworkAverage*WEIGHT_OF_5_6_ASSIGNMENTS;
-			 }
+		 }
+		 else if(numberOfAssignments<=6);
+		      if(examGrade>=PASS){
+		    	  finalGrade=examGrade*(1-WEIGHT_OF_5_6_ASSIGNMENTS);
+		    	  finalGrade +=homeworkAverage*WEIGHT_OF_5_6_ASSIGNMENTS;
+		      }
+		      else {
+		    	  if(homeworkAverage>=examGrade) {
+		    		  if(examGrade>=PASS) {
+		    			  finalGrade=examGrade*(1-WEIGHT_OF_7_8_ASSIGNMENTS_IF_PASSED);
+		    		  }
+		    		  else {
+		    			  if((homeworkAverage/10)>=GOOD_HOMEWORK_AVERAGE){
+		    				  finalGrade=examGrade*(1-WEIGHT_OF_7_8_ASSIGNMENTS_IF_FAILED_GOOD_AVERAGE);
+		    						  finalGrade+=homeworkAverage*WEIGHT_OF_7_8_ASSIGNMENTS_IF_FAILED_GOOD_AVERAGE;
+		    			  }
+		    			  else {
+		    				  finalGrade=examGrade*(1-WEIGHT_OF_7_8_ASSIGNMENTS_IF_FAILED_NOT_GOOD_AVERAGE);
+		    				  finalGrade+=homeworkAverage*WEIGHT_OF_7_8_ASSIGNMENTS_IF_FAILED_NOT_GOOD_AVERAGE;
+		    			  }
+		    		  }
+		    	  }
+		      }
+		      System.out.println("your final grade is: "+ finalGrade);
+		    						  
+		    			  }
+		    		  
+		    		  
+		    	 
+		      }
+		    
+		
+	          
+            
 		 
-		 }
-		 else {
-			 if(homeworkAverage>examGrade){
-				 if(examGrade>=PASS) {
-					 finalGrade= examGrade*(1-WEIGHT_OF_7_8_ASSIGNMENTS_IF_PASSED);
-				 }
-				 else {
-					 
-				 }
-				 }
-			 }
-		 }
-		 else {
-			
-		
-		
-	    	}
-		
+		 	
 
-	}
+	
 
 
